@@ -30,14 +30,11 @@ function operate(a,b, operator) { // Takes in an operator and returns the two nu
     else {return "Incorrect operator!"} // Can only accept the four basic operations. Should not be an issue as operands are input from buttons, this is here as a failsafe.
 }
 
-/*
-Temporary notes to help figure this out. There are basically two cases.
-Case one is easy - I get a number, an operator, a second number, and the equals sign.
-Just evaluate as per the operate function and store the result as the first number.
-Case two is trickier - I get a number, and operator, a second number, and a second operator.
-I then need to evaluate the number/operator/number triad, use it as the new first number,
-and add the new operator to await the second number.
+const calculator = document.querySelector(‘.calculator’) // Adding a selector
+const keys = calculator.querySelector(‘.calc_grid’) // Drilling down so we can select buttons
 
-If I can resolve both of those cases functionally I can hook them up to the 
-buttons and the rest is pretty straightforward.
-*/
+keys.addEventListener(‘click’, e => {
+    if (e.target.matches(‘button’)) {
+      // This is where the magic is going to happen
+    }
+   })

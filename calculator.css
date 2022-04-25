@@ -1,0 +1,13 @@
+.calc_grid {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(3, 110px);
+    grid-template-rows: minmax(80px, auto) repeat(4, 80px);
+    }
+
+    .calc_grid > button {
+        cursor: pointer; 
+        font-size: 2rem;
+      }
+  
