@@ -30,11 +30,35 @@ function operate(a,b, operator) { // Takes in an operator and returns the two nu
     else {return "Incorrect operator!"} // Can only accept the four basic operations. Should not be an issue as operands are input from buttons, this is here as a failsafe.
 }
 
-const calculator = document.querySelector(‘.calculator’) // Adding a selector
-const keys = calculator.querySelector(‘.calc_grid’) // Drilling down so we can select buttons
+const calculator = document.querySelector('.calculator') // Adding a selector
+const keys = calculator.querySelector('.calc_grid') // Drilling down so we can select buttons
 
-keys.addEventListener(‘click’, e => {
-    if (e.target.matches(‘button’)) {
-      // This is where the magic is going to happen
+keys.addEventListener('click', e => {
+    console.log("buttan");
+    if (e.target.matches('button')) {
+        const newkey = e.target;
+        const operation = newkey.dataset.action;
+        
+        if (
+            operation === 'add' ||
+            operation === 'subtract' ||
+            operation === 'multiply' ||
+            operation === 'divide'
+          ) {
+            console.log('operator key!')
+          }
+      else if (operation == null) {
+          console.log('number key!')
+      }
+
+      else if (operation == "equals") {
+          console.log("equals")
+      }
+      else if (operation == "decimal") {
+          console.log("decimal point")
+      }
+      else if (operation == "clear") {
+        console.log("clear key")
+    }
     }
    })

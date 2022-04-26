@@ -11,3 +11,11 @@
         font-size: 2rem;
       }
   
+
+.calc_display {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    border: 5px solid black;
+}
