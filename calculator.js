@@ -35,20 +35,24 @@ const keys = calculator.querySelector('.calc_grid') // Drilling down so we can s
 
 keys.addEventListener('click', e => {
     console.log("buttan");
-    if (e.target.matches('button')) {
-        const newkey = e.target;
-        const operation = newkey.dataset.action;
+    const calculatorDisp = document.querySelector('.calc_display') // We want this so we know what's on the calculator.
+
+    if (e.target.matches('button')) { // Checking to see if the thing we clicked is a button, otherwise why do anything?
+        const newkey = e.target;  // That's our button!
+        const operation = newkey.dataset.action; // Take the data-action info and put it in this constant
+        const keyContent = newkey.textContent // What is this key? Let's get the text content.
+        const displayedNum = calculatorDisp.textContent // Get the text content of the calculator display so we know what to do next.
         
         if (
             operation === 'add' ||
             operation === 'subtract' ||
             operation === 'multiply' ||
-            operation === 'divide'
+            operation === 'divide' // These should all be self-explanatory.
           ) {
             console.log('operator key!')
           }
       else if (operation == null) {
-          console.log('number key!')
+          
       }
 
       else if (operation == "equals") {
