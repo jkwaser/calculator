@@ -51,7 +51,13 @@ keys.addEventListener('click', e => {
           ) {
             console.log('operator key!')
           }
-      else if (operation == null) {
+      else if (operation == null) { // Checks for a number key as these have no operation variable attached.
+          if (displayedNum === '0') {
+              calculatorDisp.textContent = keyContent; // This checks for an empty display and then turns the key clicked into the display if the display is empty
+          }
+          else { 
+            calculatorDisp.textContent = displayedNum + keyContent;
+          }
           
       }
 
