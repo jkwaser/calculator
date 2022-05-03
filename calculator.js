@@ -49,7 +49,7 @@ keys.addEventListener('click', e => {
             operation === 'multiply' ||
             operation === 'divide' // These should all be self-explanatory.
           ) {
-            console.log('operator key!')
+            key.classList.add('is-depressed')
           }
       else if (operation == null) { // Checks for a number key as these have no operation variable attached.
           if (displayedNum === '0') {
@@ -65,10 +65,10 @@ keys.addEventListener('click', e => {
           console.log("equals")
       }
       else if (operation == "decimal") {
-          console.log("decimal point")
+        calculatorDisp.textContent = displayedNum + "."; // Just appends the decimal point. Need to figure out how to stop this happening twice.
       }
       else if (operation == "clear") {
-        console.log("clear key")
+        calculatorDisp.textContent = "0";
     }
     }
    })
